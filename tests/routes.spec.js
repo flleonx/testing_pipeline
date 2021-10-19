@@ -3,7 +3,7 @@ const chai = require('chai');
 const chaiHtpp = require('chai-http');
 const axios = require('axios');
 
-// const Server = require('../models/server');
+const Server = require('../models/server');
 
 chai.use(require('chai-like'));
 chai.use(require('chai-things'));
