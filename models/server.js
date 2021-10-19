@@ -70,27 +70,27 @@ class Server {
 
   };
 
-  listen() {
-    this.app.listen(this.port, () => {
-      console.log(`Server running on port`, this.port);
-    });
-  };
-
-  // open() {
-  //   return new Promise( (resolve, reject) => {
-  //     const listener = this.app.listen(this.port, (err) => {
-  //       if (err) reject(err);
-  //       resolve({
-  //         port: listener.address().port,
-  //         stop: () => listener.close((err) => {
-  //           console.log('El servidor se cerró')
-  //         }),
-  //         datab: () => this.database(),
-  //         databclose: () => this.databaseclose()
-  //       })
-  //     });
-  //   });
+  // listen() {
+  //  this.app.listen(this.port, () => {
+  //    console.log(`Server running on port`, this.port);
+  //  });
   // };
+
+  open() {
+    return new Promise( (resolve, reject) => {
+       const listener = this.app.listen(this.port, (err) => {
+         if (err) reject(err);
+         resolve({
+           port: listener.address().port,
+           stop: () => listener.close((err) => {
+             console.log('El servidor se cerró')
+           }),
+           datab: () => this.database(),
+           databclose: () => this.databaseclose()
+         })
+       });
+     });
+   };
 };
 
 module.exports = Server;
