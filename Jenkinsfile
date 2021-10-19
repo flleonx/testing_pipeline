@@ -66,7 +66,7 @@ pipeline {
               -Dsonar.projectName=SimpleExpressExample \
               -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
               -Dsonar.host.url=http://mysonarqube:9000 \
-              -Dsonar.sources=./app.js \
+              -Dsonar.sources=./app.js,./models \
               -Dsonar.login=admin \
               -Dsonar.password=flleonx \
               -Dsonar.test=./test \
