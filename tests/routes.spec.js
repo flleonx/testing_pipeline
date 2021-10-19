@@ -17,16 +17,16 @@ chai.use(chaiHtpp);
 
 describe('GET /api/users/', () => {
 
-  // let server = new Server(3000);
+  let server = new Server(3000);
 
-  // before(async () => {
-  //     server = await server.open();
-  //     await server.datab();
-  //   });
-  // after( async () => {
-    //   await server.databclose();
-    //   await server.stop();
-    // });
+   before(async () => {
+       server = await server.open();
+       await server.datab();
+     });
+   after( async () => {
+       await server.databclose();
+       await server.stop();
+     });
   it('It should GET all users', async () => {
 
     try {
