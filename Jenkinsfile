@@ -70,7 +70,7 @@ pipeline {
               -Dsonar.login=admin \
               -Dsonar.password=flleonx \
               -Dsonar.test=./test \
-              -Dsonar.javascript.lcov.reportPaths=./coverage.lcov.info"
+              -Dsonar.coverageReportPaths=./coverage.lcov.info"
         }
         timeout(time: 3, unit: 'MINUTES') {
           waitForQualityGate abortPipeline: qualityGateValidation(waitForQualityGate())
