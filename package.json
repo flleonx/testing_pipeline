@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "test": "mocha tests",
-    "coverage": "nyc --reporter=html npm run test"
+    "coverage": "nyc --reporter=lcov npm run test"
   },
   "keywords": [],
   "author": "",
