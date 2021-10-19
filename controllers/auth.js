@@ -11,7 +11,7 @@ const login = async (req = request, res = response) => {
   try {
 
     // check if email exists
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).exec();
     if ( !user ) {
       return res.status(400).json({
         msg: 'User / Password are not correct - email'
