@@ -68,7 +68,7 @@ pipeline {
               -Dsonar.host.url=http://mysonarqube:9000 \
               -Dsonar.sources=./app.js \
               -Dsonar.login=admin \
-              -Dsonar.password=admin \
+              -Dsonar.password=flleonx \
               -Dsonar.test=./test \
               -Dsonar.javascript.lcov.reportPaths=./coverage.lcov.info"
         }
